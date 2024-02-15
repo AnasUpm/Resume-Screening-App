@@ -9,7 +9,7 @@ import pandas as pd
 from collections import Counter
 import spacy
 #spacy.cli.download("en_core_web_sm")
-#import en_core_web_lg;
+import en_core_web_lg;
 import streamlit as st
 import pickle
 import re
