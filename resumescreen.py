@@ -251,14 +251,14 @@ def read_resumes_from_folder(folder_path):
     return resumes
 def main():
     st.title("Resume Screening App")
-    uploaded_file = st.file_uploader('Upload Resume', type=['txt', 'pdf'])
+    #uploaded_file = st.file_uploader('Upload Resume', type=['txt', 'pdf'])
     global final_database, final_database2, data_map;
 
     i = 0;
     while i < len(onlyfiles):
         file = onlyfiles[i];
         dat = create_profile(file, i);
-        st.write("dat : ",dat)
+        #st.write("dat : ",dat)
         final_database = pd.concat([final_database, dat], ignore_index=True);
         i += 1;
         print(final_database);
@@ -276,6 +276,7 @@ def main():
     st.write(Sel_printer(1))
     print("Selected Candidates :");
     Sel_printer(10);
+    st.write(Sel_printer(10))
 
     # Update this variable with the path to the folder containing resumes
     resumes_folder_path = r'D:\downloads\archive\Resume_EY_Diverse'
